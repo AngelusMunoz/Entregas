@@ -1,0 +1,1075 @@
+/* ESTILOS GENERALES - Para toda la página */
+/* Variables de colores principales del sitio */
+:root {
+  --color-fondo-oscuro: #0d0d1a;
+  --color-dorado: #c9a84c;
+  --color-dorado-claro: #f0d080;
+  --color-texto-claro: #e8e0d0;
+  --color-texto-gris: #a89880;
+  --sombra-magica: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* Reset básico: quita márgenes y padding por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del fondo de toda la página */
+body {
+  background-color: var(--color-fondo-oscuro);
+  background-image: 
+    radial-gradient(ellipse at top, #1a1035 0%, #0d0d1a 60%);
+  color: var(--color-texto-claro);
+  font-family: 'Crimson Text', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+
+/* ENCABEZADO PRINCIPAL (HEADER) */
+
+.encabezado-principal {
+  /* FLEXBOX: column - apila elementos verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* align-items: center - centra hijos horizontalmente */
+  justify-content: center;    /* justify-content: center - centra verticalmente */
+  padding: 60px 20px 50px;
+  background: linear-gradient(180deg, #0a0618 0%, #150d2e 50%, #0d0d1a 100%);
+  border-bottom: 2px solid var(--color-dorado);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estrellas decorativas del encabezado */
+.estrellas {
+  /* FLEXBOX: row + space-around - distribuye elementos con espacio uniforme */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;  /* justify-content: space-around */
+  align-items: center;            /* align-items: center */
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  font-size: 20px;
+  color: var(--color-dorado);
+  opacity: 0.6;
+}
+
+
+/* Título grande "Hogwarts School" */
+.titulo-principal {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--color-dorado);
+  text-shadow: 0 0 30px rgba(201, 168, 76, 0.5), 0 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+/* Subtítulo "of Witchcraft and Wizardry" */
+.subtitulo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: var(--color-texto-gris);
+  letter-spacing: 6px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+/* Línea decorativa con símbolos */
+.linea-decorativa {
+  font-size: 2rem;
+  color: var(--color-dorado);
+  margin: 16px 0 30px;
+  letter-spacing: 10px;
+}
+
+.linea-decorativa-pequena {
+  font-size: 1.2rem;
+  color: var(--color-dorado);
+  margin: 12px 0 24px;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+/* Caja del texto de bienvenida */
+.bienvenida {
+  /* FLEXBOX: column con gap para separar párrafos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;                        
+  max-width: 760px;
+  margin: 0 auto 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 8px;
+  padding: 28px 36px;
+}
+
+/* Estilo del texto de bienvenida */
+.texto-bienvenida {
+  color: var(--color-texto-claro);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.texto-bienvenida:last-child {
+  margin-bottom: 0;
+}
+
+/* Imagen del castillo */
+.castillo-container {
+  /* FLEXBOX: centra la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.imagen-castillo {
+  max-width: 280px;
+  border-radius: 8px;
+  opacity: 0.7;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+
+/* NUEVA SECCIÓN: HISTORIA EXTENDIDA */
+
+.historia-extendida {
+  /* FLEXBOX: column - apila todos los elementos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px;
+  background: linear-gradient(180deg, #0d0d1a 0%, #1a0f2e 100%);
+}
+
+.titulo-seccion {
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  color: var(--color-dorado);
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.contenido-historia {
+  /* GRID: 2 columnas usando fr (fractional units) */
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* grid-template-columns con fr */
+  grid-gap: 28px;                   /* grid-gap para separar elementos */
+  max-width: 1100px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.parrafo-historia {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.parrafo-historia h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--color-dorado);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.parrafo-historia p {
+  color: var(--color-texto-claro);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* GRID DE CARACTERÍSTICAS*/
+
+.caracteristicas-grid {
+  /* GRID AVANZADO con múltiples propiedades */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-template-rows: auto auto;          
+  grid-gap: 24px;                         
+  max-width: 1000px;
+  width: 100%;
+  margin: 50px auto 60px;
+  padding: 0 20px;
+}
+
+.caracteristica-item {
+  /* FLEXBOX: column con center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 12px;
+  padding: 28px 20px;
+  transition: transform 0.3s ease;
+}
+
+.caracteristica-item:hover {
+  transform: translateY(-5px);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+/* Uso de ORDER para cambiar el orden visual */
+.item-1 {
+  order: 1;
+}
+
+.item-2 {
+  order: 2;
+}
+
+.item-3 {
+  order: 3;
+}
+
+.item-4 {
+  order: 4;
+}
+
+.item-5 {
+  order: 5;
+}
+
+.item-6 {
+  order: 6;
+}
+
+/* El item-4 ocupa 2 columnas usando grid-column */
+.item-4 {
+  grid-column: 1 / 3; 
+}
+
+/* El item-6 ocupa 2 filas usando grid-row */
+.item-6 {
+  grid-row: 2 / 3;  
+}
+
+.icono-caracteristica {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.caracteristica-item h5 {
+  font-family: 'Cinzel', serif;
+  color: var(--color-dorado);
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.caracteristica-item p {
+  color: var(--color-texto-gris);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+
+/* SECCIÓN DE FUNDADORES */
+
+.fundadores-section {
+  /* FLEXBOX: column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 40px;
+}
+
+.titulo-fundadores {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--color-dorado);
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+.fundadores-container {
+  /* FLEXBOX: row con WRAP para que los elementos se envuelvan */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;              
+  justify-content: space-between;
+  align-content: flex-start;   
+  width: 100%;
+  padding: 30px 20px;
+}
+
+.fundador {
+  /* FLEXBOX: column */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  align-items: flex-start;     
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(201, 168, 76, 0.3);
+  border-radius: 10px;
+  padding: 24px;
+  
+  flex-basis: calc(50% - 12px); 
+  flex-grow: 1;                
+  flex-shrink: 1;              
+  
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+
+.fundador:hover {
+  transform: scale(1.03);
+}
+
+/* Uso de ALIGN-SELF para override del align-items del padre */
+.fundador:nth-child(2) {
+  align-self: stretch; 
+}
+
+.fundador:nth-child(3) {
+  align-self: center;  
+}
+
+.fundador-nombre {
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.fundador-descripcion {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-texto-claro);
+}
+
+/* Colores específicos de cada fundador */
+.gryffindor-founder {
+  border-color: #740001;
+  background: linear-gradient(135deg, rgba(116, 0, 1, 0.1) 0%, rgba(174, 0, 1, 0.05) 100%);
+}
+
+.gryffindor-founder .fundador-nombre {
+  color: #FFC500;
+}
+
+.ravenclaw-founder {
+  border-color: #0E1A40;
+  background: linear-gradient(135deg, rgba(14, 26, 64, 0.1) 0%, rgba(26, 48, 96, 0.05) 100%);
+}
+
+.ravenclaw-founder .fundador-nombre {
+  color: #946B2D;
+}
+
+.slytherin-founder {
+  border-color: #1A472A;
+  background: linear-gradient(135deg, rgba(26, 71, 42, 0.1) 0%, rgba(45, 107, 66, 0.05) 100%);
+}
+
+.slytherin-founder .fundador-nombre {
+  color: #7fba8a;
+}
+
+.hufflepuff-founder {
+  border-color: #726000;
+  background: linear-gradient(135deg, rgba(114, 96, 0, 0.1) 0%, rgba(240, 199, 94, 0.05) 100%);
+}
+
+.hufflepuff-founder .fundador-nombre {
+  color: #F0C75E;
+}
+
+
+/* SECCIÓN DE LAS CASAS - NUEVA INTRODUCCIÓN */
+
+.intro-casas {
+  display: flex;
+  flex-direction: column-reverse; 
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+}
+
+
+.explicacion-casas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-top: 30px;
+}
+
+.parrafo-explicativo {
+  color: var(--color-texto-claro);
+  font-size: 1.08rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.texto-final {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* VALORES GENERALES */
+
+.valores-generales {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: center;    
+  align-content: space-between;
+  gap: 16px;
+  margin: 30px 0;
+  padding: 24px;
+  background: rgba(201, 168, 76, 0.06);
+  border-radius: 8px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.valores-generales .valor-item {
+  width: 100%;
+}
+
+.valores-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.imagen-casas-inicio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.imagen-casas-inicio img {
+  max-width: auto;
+}
+
+.valor-item {
+  display: flex;
+  flex-direction: row-reverse;  
+  align-items: center;           
+  justify-content: flex-end; 
+  gap: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.valor-icono {
+  font-size: 2rem;
+  /* flex-shrink: 0 evita que el icono se encoja */
+  flex-shrink: 0;
+}
+
+.valor-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.valor-texto strong {
+  font-family: 'Cinzel', serif;
+  color: var(--color-dorado);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.valor-texto span {
+  color: var(--color-texto-gris);
+  font-size: 0.9rem;
+}
+
+
+/* SECCIÓN DE LAS CUATRO CASAS */
+
+/* Contenedor principal de las casas */
+.seccion-casas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título "The Four Houses" */
+.titulo-casas {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--color-dorado);
+  text-align: center;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+/* GRID DE CASAS */
+
+.cuadricula-casas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 36px;
+  margin-top: 40px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* En pantallas grandes, forzamos 2 columnas */
+@media (min-width: 769px) {
+  .cuadricula-casas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: en pantallas pequeñas, 1 sola columna */
+@media (max-width: 768px) {
+  .cuadricula-casas {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-principal {
+    font-size: 2.2rem;
+  }
+
+  .contenido-historia {
+    grid-template-columns: 1fr; /* Una columna en móvil */
+  }
+
+  .caracteristicas-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+  }
+
+  .fundadores-container {
+    flex-direction: column; /* Apila fundadores verticalmente en móvil */
+  }
+
+  .valores-generales {
+    flex-wrap: wrap; /* Cambia a wrap normal en móvil */
+  }
+
+  .valor-item {
+    flex-direction: row; /* Cambia a row normal en móvil */
+  }
+}
+
+
+/* TARJETAS DE CADA CASA */
+
+.tarjeta {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--sombra-magica);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;  /* align-items: stretch - los hijos se estiran horizontalmente */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8);
+}
+
+/* Encabezado de cada tarjeta */
+.tarjeta-encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px 20px 20px;
+}
+
+.nombre-casa {
+  font-family: 'Cinzel', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.lema-casa {
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+/* Contenedor de la imagen */
+.tarjeta-imagen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  min-height: 180px;
+}
+
+.gif-casa {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Descripción de la casa */
+.tarjeta-descripcion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 22px;
+  background: rgba(0, 0, 0, 0.25);
+  flex-grow: 1; 
+}
+
+.tarjeta-descripcion p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---- Sección de miembros ---- */
+
+.miembros-famosos {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 18px 0 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.titulo-miembros {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 14px;
+  text-align: center;
+  padding: 0 22px;
+}
+
+/* Fila horizontal de los 3 miembros */
+.fila-miembros {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: transform 0.5s ease;
+  transform: translateX(0%);
+}
+
+.miembro {
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.foto-miembro {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: 0.2s ease;
+}
+
+.foto-miembro:hover {
+  transform: scale(1.08);
+}
+
+.nombre-miembro {
+  font-size: 0.78rem;
+  text-align: center;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+
+/* Controles del carrusel */
+.carrusel-controles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 16px;
+  padding: 10px 30px 4px;
+}
+
+.btn-carrusel {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #e8e0d0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-carrusel:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.carrusel-puntos {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.punto {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.2s ease;
+}
+
+.punto.activo {
+  background: #c9a84c;
+}
+
+/* Pie de la tarjeta */
+.tarjeta-pie {
+  display: flex;
+  justify-content: flex-end;  
+  align-items: flex-end;       
+  padding: 18px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.boton-fandom {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-fandom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ============================================================
+   COLORES ESPECÍFICOS DE CADA CASA
+   ============================================================ */
+
+/* ---------- GRYFFINDOR: Rojo y Dorado ---------- */
+
+.gryffindor {
+  background: linear-gradient(160deg, #1a0505 0%, #2a0808 100%);
+  border: 1px solid #740001;
+}
+
+.gryffindor-encabezado {
+  background: linear-gradient(135deg, #740001 0%, #ae0001 50%, #740001 100%);
+  color: #FFC500;
+}
+
+.gryffindor .tarjeta-descripcion strong {
+  color: #FFC500;
+}
+
+.gryffindor-boton {
+  background: linear-gradient(135deg, #740001, #ae0001);
+  color: #FFC500;
+  border: 1px solid #FFC500;
+}
+
+/* ---------- RAVENCLAW: Azul y Bronce ---------- */
+
+.ravenclaw {
+  background: linear-gradient(160deg, #030d1e 0%, #071525 100%);
+  border: 1px solid #0E1A40;
+}
+
+.ravenclaw-encabezado {
+  background: linear-gradient(135deg, #0E1A40 0%, #1a3060 50%, #0E1A40 100%);
+  color: #946B2D;
+}
+
+.ravenclaw .tarjeta-descripcion strong {
+  color: #946B2D;
+}
+
+.ravenclaw-boton {
+  background: linear-gradient(135deg, #0E1A40, #1a3060);
+  color: #c9943d;
+  border: 1px solid #946B2D;
+}
+
+/* ---------- SLYTHERIN: Verde y Plata ---------- */
+
+.slytherin {
+  background: linear-gradient(160deg, #020e06 0%, #041208 100%);
+  border: 1px solid #1A472A;
+}
+
+.slytherin-encabezado {
+  background: linear-gradient(135deg, #1A472A 0%, #2d6b42 50%, #1A472A 100%);
+  color: #AAAAAA;
+}
+
+.slytherin .tarjeta-descripcion strong {
+  color: #7fba8a;
+}
+
+.slytherin-boton {
+  background: linear-gradient(135deg, #1A472A, #2d6b42);
+  color: #cccccc;
+  border: 1px solid #888888;
+}
+
+/* ---------- HUFFLEPUFF: Amarillo y Negro ---------- */
+
+.hufflepuff {
+  background: linear-gradient(160deg, #1a1500 0%, #231c00 100%);
+  border: 1px solid #726000;
+}
+
+.hufflepuff-encabezado {
+  background: linear-gradient(135deg, #726000 0%, #F0C75E 50%, #726000 100%);
+  color: #1a1500;
+}
+
+.hufflepuff .lema-casa {
+  color: #3d3200;
+}
+
+.hufflepuff .tarjeta-descripcion strong {
+  color: #F0C75E;
+}
+
+.hufflepuff-boton {
+  background: linear-gradient(135deg, #726000, #a08a00);
+  color: #F0C75E;
+  border: 1px solid #F0C75E;
+}
+
+
+/* PIE DE PÁGINA (FOOTER) */
+
+.pie-pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 60vh;
+  background: #070710;
+  border-top: 2px solid var(--color-dorado);
+  padding: 36px 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  color: var(--color-texto-gris);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.creditos {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-dorado);
+  margin: 12px 0;
+  letter-spacing: 0.5px;
+}
+
+.fandom-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.fandom-link a {
+  color: var(--color-dorado);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--color-dorado);
+  transition: color 0.2s ease;
+}
+
+.fandom-link a:hover {
+  color: var(--color-dorado-claro);
+}
+
+/* NAV.CSS — Estilos del topbar y sidebar */
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #0a0618;
+  border-bottom: 2px solid #c9a84c;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: #c9a84c;
+  letter-spacing: 2px;
+}
+
+.btn-menu {
+  background: transparent;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.btn-menu:hover {
+  background-color: rgba(201, 168, 76, 0.15);
+}
+
+
+/* --- SIDEBAR --- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 55px;
+  left: -220px;
+  width: 220px;
+  height: calc(100vh - 55px);
+  background-color: #0d0d1a;
+  border-right: 2px solid #c9a84c;
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding-top: 20px;
+}
+
+.sidebar.abierto {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.sidebar ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 24px;
+  color: #e8e0d0;
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(201, 168, 76, 0.12);
+  color: #c9a84c;
+}
+
+
+/* --- OVERLAY --- */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.overlay.visible {
+  display: block;
+}
+
+
+/* --- SECCIONES --- */
+.seccion {
+  display: none;
+}
+
+.seccion.activa {
+  display: block;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 55px;
+}
+
+
+/* --- INFO DE CONTACTO --- */
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 28px auto;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-radius: 8px;
+  padding: 28px 36px;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.05rem;
+  color: #e8e0d0;
+}

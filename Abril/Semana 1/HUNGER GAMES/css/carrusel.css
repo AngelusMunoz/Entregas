@@ -1,0 +1,108 @@
+/* CONTENEDOR GENERAL */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* 🔥 clave: oculta las otras pelis */
+}
+
+/* CARRUSEL (la fila que se mueve) */
+.carrusel-peliculas {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* CADA PELÍCULA */
+.carrusel-peliculas > div {
+    min-width: 100%; /* 🔥 ocupa toda la pantalla */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* CONTROLES (botones + puntos) */
+.carrusel-controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* ------------- BOTONES-------------- */
+.btn-carrusel,
+.carrusel-controles button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.carrusel-controles button:hover {
+    background: #333;
+}
+
+/* PUNTOS */
+.carrusel-puntos {
+    display: flex;
+    gap: 8px;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background: gray;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.punto.activo {
+    background: white;
+    transform: scale(1.2);
+}
+
+/*---------- DISTRITOS ------------*/
+
+/* CONTENEDOR GENERAL */
+.contenedor-distritos {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* MARCO DEL CARRUSEL (lo visible) */
+.carrusel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* TRACK (LO QUE SE MUEVE) */
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* CADA DISTRITO */
+.distrito {
+    min-width: 100%; /* 1 por pantalla */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+/* CONTENIDO INTERNO */
+.info-distrito {
+    background: #111;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* IMAGEN */
+.info-distrito img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px 0;
+}

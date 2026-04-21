@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hogwarts School of Witchcraft and Wizardry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topbar">
+    <div class="logo">⚡ Hogwarts</div>
+    <button class="btn-menu" onclick="toggleSidebar()">☰ Menu</button>
+  </nav>
+
+  <!--  SIDEBAR  -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#" onclick="mostrarSeccion('intro')">📜 Introducción</a></li>
+      <li><a href="#" onclick="mostrarSeccion('casas')">🏰 Las Casas</a></li>
+      <li><a href="#" onclick="mostrarSeccion('contacto')">✉️ Contacto</a></li>
+    </ul>
+  </div>
+
+  <!--  OVERLAY  -->
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <!--  CONTENIDO PRINCIPAL  -->
+  <div class="contenido-principal">
+
+    <!--  SECCIÓN: INTRODUCCIÓN  -->
+    <section id="intro" class="seccion activa">
+      <header class="encabezado-principal">
+        <div class="estrellas">
+          <span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span>
+        </div>
+        <h1 class="titulo-principal">Hogwarts School</h1>
+        <h2 class="subtitulo">of Witchcraft and Wizardry</h2>
+        <div class="linea-decorativa">⚡ ✦ ⚡</div>
+
+        <div class="bienvenida">
+          <p class="texto-bienvenida">
+            Welcome, young wizard! You have found your way to the most extraordinary place in the wizarding world.
+            This page is your guide to <strong>Hogwarts School of Witchcraft and Wizardry</strong> —
+            the legendary Scottish castle where witches and wizards aged eleven and above are trained in the magical arts.
+          </p>
+          <p class="texto-bienvenida">
+            Founded over a thousand years ago by four of the greatest wizards of the age, Hogwarts is divided into
+            <strong>four Houses</strong>, each bearing the name and qualities of its founder.
+            Every student is sorted by the enchanted Sorting Hat into one of these Houses:
+            <em>Gryffindor, Hufflepuff, Ravenclaw, or Slytherin</em>.
+            Explore each house and discover where your magic truly belongs.
+          </p>
+        </div>
+
+        <div class="castillo-container">
+          <img
+            src="https://i.pinimg.com/originals/3d/f3/f9/3df3f9c8f0558602afda5be339c4c48c.gif"
+            alt="Hogwarts Castle"
+            class="imagen-castillo">
+        </div>
+      </header>
+
+      <!-- NUEVA SECCIÓN: HISTORIA EXTENDIDA -->
+      <div class="historia-extendida">
+        <h3 class="titulo-seccion">✦ A Thousand Years of Magic ✦</h3>
+        <div class="linea-decorativa-pequena">—— ✧ ——</div>
+        
+        <div class="contenido-historia">
+          <div class="parrafo-historia">
+            <h4>The Founding</h4>
+            <p>
+              In the early tenth century, four wizards of unparalleled skill and vision came together to create 
+              what would become the finest school of witchcraft and wizardry in the world. <strong>Godric Gryffindor</strong>, 
+              <strong>Helga Hufflepuff</strong>, <strong>Rowena Ravenclaw</strong>, and <strong>Salazar Slytherin</strong> 
+              built Hogwarts in the remote Highlands of Scotland, hidden from Muggle eyes by powerful enchantments 
+              that persist to this day.
+            </p>
+          </div>
+
+          <div class="parrafo-historia">
+            <h4>The Castle Grounds</h4>
+            <p>
+              The castle itself is a marvel of magical architecture, with moving staircases, secret passages, 
+              and rooms that appear only to those in need. The grounds extend far beyond the castle walls, 
+              encompassing the Forbidden Forest (home to centaurs, unicorns, and darker creatures), the Black Lake 
+              (inhabited by merpeople and a giant squid), and the Quidditch pitch where students compete in the 
+              wizarding world's most beloved sport.
+            </p>
+          </div>
+
+          <div class="parrafo-historia">
+            <h4>Education & Curriculum</h4>
+            <p>
+              Students at Hogwarts follow a rigorous seven-year program of magical education. Core subjects include 
+              Transfiguration, Charms, Potions, Defense Against the Dark Arts, Astronomy, Herbology, and History of Magic. 
+              In their third year, students may choose from elective courses such as Divination, Care of Magical Creatures, 
+              Arithmancy, and Ancient Runes. The culmination of their education comes in the form of O.W.L.s (Ordinary 
+              Wizarding Levels) in fifth year and N.E.W.T.s (Nastily Exhausting Wizarding Tests) in seventh year.
+            </p>
+          </div>
+
+          <div class="parrafo-historia">
+            <h4>Traditions & Events</h4>
+            <p>
+              Hogwarts is rich in tradition. The school year begins with the Sorting Ceremony, where first-years 
+              are placed into their houses by the ancient Sorting Hat. Throughout the year, students compete for 
+              the House Cup, earning or losing points based on their academic achievements and behavior. Special 
+              events include the Halloween Feast, the Yule Ball (held during the Triwizard Tournament), and the 
+              year-end feast where the House Cup is awarded.
+            </p>
+          </div>
+        </div>
+
+        <!-- GRID DE CARACTERÍSTICAS -->
+        <div class="caracteristicas-grid">
+          <div class="caracteristica-item item-1">
+            <span class="icono-caracteristica">📚</span>
+            <h5>7 Years</h5>
+            <p>Complete magical education</p>
+          </div>
+          <div class="caracteristica-item item-2">
+            <span class="icono-caracteristica">🏰</span>
+            <h5>142 Staircases</h5>
+            <p>Some of them move</p>
+          </div>
+          <div class="caracteristica-item item-3">
+            <span class="icono-caracteristica">👻</span>
+            <h5>20+ Ghosts</h5>
+            <p>Including Nearly Headless Nick</p>
+          </div>
+          <div class="caracteristica-item item-4">
+            <span class="icono-caracteristica">🧙</span>
+            <h5>4 Founders</h5>
+            <p>Greatest wizards of their age</p>
+          </div>
+          <div class="caracteristica-item item-5">
+            <span class="icono-caracteristica">📖</span>
+            <h5>Thousands of Books</h5>
+            <p>In the library</p>
+          </div>
+          <div class="caracteristica-item item-6">
+            <span class="icono-caracteristica">🌲</span>
+            <h5>Forbidden Forest</h5>
+            <p>Full of magical creatures</p>
+          </div>
+        </div>
+
+        <!-- SECCIÓN DE FUNDADORES -->
+        <div class="fundadores-section">
+          <h3 class="titulo-fundadores">The Four Founders</h3>
+          <div class="linea-decorativa-pequena">—— ⚡ ——</div>
+          
+          <div class="fundadores-container">
+            <div class="fundador gryffindor-founder">
+              <div class="fundador-nombre">Godric Gryffindor</div>
+              <div class="fundador-descripcion">
+                The bravest of the four, Gryffindor valued courage and chivalry above all else. 
+                His sword is one of Hogwarts' greatest treasures.
+              </div>
+            </div>
+            <div class="fundador ravenclaw-founder">
+              <div class="fundador-nombre">Rowena Ravenclaw</div>
+              <div class="fundador-descripcion">
+                The most intelligent founder, Ravenclaw believed that wit and learning were paramount. 
+                Her diadem was lost for centuries.
+              </div>
+            </div>
+            <div class="fundador slytherin-founder">
+              <div class="fundador-nombre">Salazar Slytherin</div>
+              <div class="fundador-descripcion">
+                The most cunning and ambitious, Slytherin valued pure-blood heritage. 
+                He secretly built the Chamber of Secrets.
+              </div>
+            </div>
+            <div class="fundador hufflepuff-founder">
+              <div class="fundador-nombre">Helga Hufflepuff</div>
+              <div class="fundador-descripcion">
+                The most just and loyal, Hufflepuff believed in hard work and fair play. 
+                She was the most inclusive of the founders.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!--  SECCIÓN: LAS CASAS  -->
+    <section id="casas" class="seccion">
+
+      <main class="seccion-casas">
+        <!-- TEXTO INTRODUCTORIO SOBRE LAS CASAS -->
+        <div class="intro-casas">
+          <h3 class="titulo-casas">The Four Houses of Hogwarts</h3>
+          <div class="linea-decorativa">— ✦ —</div>
+          
+          <div class="explicacion-casas">
+            <p class="parrafo-explicativo">
+              Upon arrival at Hogwarts, every first-year student participates in the <strong>Sorting Ceremony</strong>, 
+              a time-honored tradition dating back to the school's founding. The enchanted <em>Sorting Hat</em>, 
+              which once belonged to Godric Gryffindor himself, is placed upon each student's head and determines 
+              which of the four houses they will join for their seven years at the school.
+            </p>
+            
+            <p class="parrafo-explicativo">
+              Each house has its own <strong>unique identity, values, and history</strong>. While the Hat primarily 
+              considers a student's innate qualities and potential, it also takes into account their preferences 
+              and desires. The houses compete throughout the year for the <em>House Cup</em>, earning or losing 
+              points based on academic achievement, rule-following, and demonstrations of house values.
+            </p>
+            
+            <div class="valores-generales">
+              <!-- GIF DE LAS CASAS EN UNA -->
+              <div class="imagen-casas-inicio">
+                <img src="https://home.adelphi.edu/~nu21306/logo.gif" alt="casas">
+              </div>
+
+              <div class="valores-contenido">
+                <div class="valor-item">
+                  <span class="valor-icono">⚔️</span>
+                  <div class="valor-texto">
+                    <strong>Bravery</strong>
+                    <span>Courage in the face of danger</span>
+                  </div>
+                </div>
+                <div class="valor-item">
+                  <span class="valor-icono">🧠</span>
+                  <div class="valor-texto">
+                    <strong>Wisdom</strong>
+                    <span>Intelligence and learning</span>
+                  </div>
+                </div>
+                <div class="valor-item">
+                  <span class="valor-icono">🐍</span>
+                  <div class="valor-texto">
+                    <strong>Ambition</strong>
+                    <span>Cunning and resourcefulness</span>
+                  </div>
+                </div>
+                <div class="valor-item">
+                  <span class="valor-icono">🤝</span>
+                  <div class="valor-texto">
+                    <strong>Loyalty</strong>
+                    <span>Hard work and dedication</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="parrafo-explicativo texto-final">
+              Your house becomes your family at Hogwarts. You'll share a common room, dormitories, and many classes 
+              with your fellow house members. The bonds formed within your house often last a lifetime, creating 
+              friendships and connections that extend far beyond your school years. Now, let us explore each of 
+              the four noble houses in detail...
+            </p>
+          </div>
+        </div>
+
+        <!-- CUADRÍCULA DE CASAS -->
+        <div class="cuadricula-casas">
+
+          <!-- GRYFFINDOR -->
+          <div class="tarjeta gryffindor">
+            <div class="tarjeta-encabezado gryffindor-encabezado">
+              <h2 class="nombre-casa">⚔️ Gryffindor</h2>
+              <p class="lema-casa">"Brave at Heart"</p>
+            </div>
+            <div class="tarjeta-imagen">
+              <img src="https://media.tenor.com/kqo2DyDaVG0AAAAM/hogwarts-legacy-warner-bros-interactive-entertainment.gif" alt="Gryffindor" class="gif-casa">
+            </div>
+            <div class="tarjeta-descripcion">
+              <p>Gryffindor values <strong>bravery, nerve, chivalry, and daring</strong>. Founded by the bold Godric Gryffindor, this house is represented by a lion and its colors are scarlet red and gold. The ghost of Gryffindor is Nearly Headless Nick.</p>
+            </div>
+            <div class="miembros-famosos">
+              <h4 class="titulo-miembros">Notable Members</h4>
+              <div class="fila-miembros" id="carrusel-gryffindor" data-index="0">
+                <div class="miembro">
+                  <img src="imagenes/Harrypotter.webp" alt="Harry Potter" class="foto-miembro">
+                  <p class="nombre-miembro">Harry Potter</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/Hermione.webp" alt="Hermione Granger" class="foto-miembro">
+                  <p class="nombre-miembro">Hermione Granger</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/Rony.webp" alt="Ron Weasley" class="foto-miembro">
+                  <p class="nombre-miembro">Ron Weasley</p>
+                </div>
+              </div>
+              <div class="carrusel-controles">
+                <button class="btn-carrusel" onclick="moverCarrusel('gryffindor', -1)">◀</button>
+                <div class="carrusel-puntos" id="puntos-gryffindor">
+                  <div class="punto activo"></div>
+                  <div class="punto"></div>
+                  <div class="punto"></div>
+                </div>
+                <button class="btn-carrusel" onclick="moverCarrusel('gryffindor', 1)">▶</button>
+              </div>
+            </div>
+            <div class="tarjeta-pie">
+              <a href="https://harrypotter.fandom.com/wiki/Gryffindor" target="_blank" class="boton-fandom gryffindor-boton">⚡ Learn More on Fandom</a>
+            </div>
+          </div>
+
+          <!-- RAVENCLAW -->
+          <div class="tarjeta ravenclaw">
+            <div class="tarjeta-encabezado ravenclaw-encabezado">
+              <h2 class="nombre-casa">🦅 Ravenclaw</h2>
+              <p class="lema-casa">"Wit Beyond Measure"</p>
+            </div>
+            <div class="tarjeta-imagen">
+              <img src="https://media.tenor.com/cdvkBgeFD0AAAAAM/hogwarts-legacy-warner-bros-interactive-entertainment.gif" alt="Ravenclaw" class="gif-casa">
+            </div>
+            <div class="tarjeta-descripcion">
+              <p>Ravenclaw prizes <strong>wisdom, intelligence, creativity, and learning</strong>. Founded by Rowena Ravenclaw, this house is represented by an eagle and its colors are blue and bronze. The ghost of Ravenclaw is The Grey Lady.</p>
+            </div>
+            <div class="miembros-famosos">
+              <h4 class="titulo-miembros">Notable Members</h4>
+              <div class="fila-miembros" id="carrusel-ravenclaw" data-index="0">
+                <div class="miembro">
+                  <img src="imagenes/lunalovegood.jfif" alt="Luna Lovegood" class="foto-miembro">
+                  <p class="nombre-miembro">Luna Lovegood</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/cho chang.webp" alt="Cho Chang" class="foto-miembro">
+                  <p class="nombre-miembro">Cho Chang</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/gilderoy.webp" alt="Gilderoy Lockhart" class="foto-miembro">
+                  <p class="nombre-miembro">Gilderoy Lockhart</p>
+                </div>
+              </div>
+              <div class="carrusel-controles">
+                <button class="btn-carrusel" onclick="moverCarrusel('ravenclaw', -1)">◀</button>
+                <div class="carrusel-puntos" id="puntos-ravenclaw">
+                  <div class="punto activo"></div>
+                  <div class="punto"></div>
+                  <div class="punto"></div>
+                </div>
+                <button class="btn-carrusel" onclick="moverCarrusel('ravenclaw', 1)">▶</button>
+              </div>
+            </div>
+            <div class="tarjeta-pie">
+              <a href="https://harrypotter.fandom.com/wiki/Ravenclaw" target="_blank" class="boton-fandom ravenclaw-boton">📚 Learn More on Fandom</a>
+            </div>
+          </div>
+
+          <!-- SLYTHERIN -->
+          <div class="tarjeta slytherin">
+            <div class="tarjeta-encabezado slytherin-encabezado">
+              <h2 class="nombre-casa">🐍 Slytherin</h2>
+              <p class="lema-casa">"Pure-blood Ambition"</p>
+            </div>
+            <div class="tarjeta-imagen">
+              <img src="https://media.tenor.com/q353eK4FS7QAAAAM/slytherin.gif" alt="Slytherin" class="gif-casa">
+            </div>
+            <div class="tarjeta-descripcion">
+              <p>Slytherin values <strong>ambition, cunning, leadership, and resourcefulness</strong>. Founded by Salazar Slytherin, this house is represented by a serpent and its colors are emerald green and silver. The ghost of Slytherin is The Bloody Baron.</p>
+            </div>
+            <div class="miembros-famosos">
+              <h4 class="titulo-miembros">Notable Members</h4>
+              <div class="fila-miembros" id="carrusel-slytherin" data-index="0">
+                <div class="miembro">
+                  <img src="imagenes/draco.webp" alt="Draco Malfoy" class="foto-miembro">
+                  <p class="nombre-miembro">Draco Malfoy</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/severus.jpg" alt="Severus Snape" class="foto-miembro">
+                  <p class="nombre-miembro">Severus Snape</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/tom.jfif" alt="Tom Riddle" class="foto-miembro">
+                  <p class="nombre-miembro">Tom Riddle</p>
+                </div>
+              </div>
+              <div class="carrusel-controles">
+                <button class="btn-carrusel" onclick="moverCarrusel('slytherin', -1)">◀</button>
+                <div class="carrusel-puntos" id="puntos-slytherin">
+                  <div class="punto activo"></div>
+                  <div class="punto"></div>
+                  <div class="punto"></div>
+                </div>
+                <button class="btn-carrusel" onclick="moverCarrusel('slytherin', 1)">▶</button>
+              </div>
+            </div>
+            <div class="tarjeta-pie">
+              <a href="https://harrypotter.fandom.com/wiki/Slytherin" target="_blank" class="boton-fandom slytherin-boton">🐍 Learn More on Fandom</a>
+            </div>
+          </div>
+
+          <!-- HUFFLEPUFF -->
+          <div class="tarjeta hufflepuff">
+            <div class="tarjeta-encabezado hufflepuff-encabezado">
+              <h2 class="nombre-casa">🦡 Hufflepuff</h2>
+              <p class="lema-casa">"Just and Loyal"</p>
+            </div>
+            <div class="tarjeta-imagen">
+              <img src="https://i.pinimg.com/originals/11/ec/33/11ec33058d6d0bc1e97ccdd07c2028df.gif" alt="Hufflepuff" class="gif-casa">
+            </div>
+            <div class="tarjeta-descripcion">
+              <p>Hufflepuff values <strong>hard work, patience, loyalty, and fair play</strong>. Founded by Helga Hufflepuff, this house is represented by a badger and its colors are yellow and black. The ghost of Hufflepuff is The Fat Friar.</p>
+            </div>
+            <div class="miembros-famosos">
+              <h4 class="titulo-miembros">Notable Members</h4>
+              <div class="fila-miembros" id="carrusel-hufflepuff" data-index="0">
+                <div class="miembro">
+                  <img src="imagenes/ninfa.webp" alt="Tonks" class="foto-miembro">
+                  <p class="nombre-miembro">Nymphadora Tonks</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/nwet.webp" alt="Newt Scamander" class="foto-miembro">
+                  <p class="nombre-miembro">Newt Scamander</p>
+                </div>
+                <div class="miembro">
+                  <img src="imagenes/cedric.webp" alt="Cedric Diggory" class="foto-miembro">
+                  <p class="nombre-miembro">Cedric Diggory</p>
+                </div>
+              </div>
+              <div class="carrusel-controles">
+                <button class="btn-carrusel" onclick="moverCarrusel('hufflepuff', -1)">◀</button>
+                <div class="carrusel-puntos" id="puntos-hufflepuff">
+                  <div class="punto activo"></div>
+                  <div class="punto"></div>
+                  <div class="punto"></div>
+                </div>
+                <button class="btn-carrusel" onclick="moverCarrusel('hufflepuff', 1)">▶</button>
+              </div>
+            </div>
+            <div class="tarjeta-pie">
+              <a href="https://harrypotter.fandom.com/wiki/Hufflepuff" target="_blank" class="boton-fandom hufflepuff-boton">🌻 Learn More on Fandom</a>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </section>
+
+    <!--  SECCIÓN: CONTACTO  -->
+    <section id="contacto" class="seccion">
+
+      <footer class="pie-pagina">
+        <p>✦ Hogwarts School of Witchcraft and Wizardry ✦</p>
+        <p class="creditos">"It is our choices that show what we truly are, far more than our abilities." — Albus Dumbledore</p>
+
+        <div class="contacto-info">
+          <p>📍 Highlands of Scotland (exact location unplottable)</p>
+          <p>🦉 Send an owl to: <strong>admissions@hogwarts.edu</strong></p>
+          <p>📞 Floo Network: <strong>Hogwarts Headmaster's Office</strong></p>
+        </div>
+
+        <p class="fandom-link" style="margin-top: 24px;">
+          Visit the full wiki at
+          <a href="https://harrypotter.fandom.com" target="_blank">harrypotter.fandom.com</a>
+        </p>
+      </footer>
+    </section>
+  </div>
+  <script src="nav.js"></script>
+
+</body>
+</html>

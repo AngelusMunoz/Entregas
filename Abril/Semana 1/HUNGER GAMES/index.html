@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinsajo</title>
+    <link rel="stylesheet" href="css/carrusel.css">
+</head>
+
+<body>
+    <!-- ESTO ES PRUEBA DE AUDIO -->
+    <div class="audio">
+        <audio id="intro" src="Silbido Sinsajo.mp3"></audio>
+        <audio id="fondo" src="The Hunger Games _ Ambient Soundscape [Adk7NQfnz2Y].mp3" loop></audio>
+        <!-- Botón para iniciar -->
+        <button onclick="iniciarAudio()">Entrar a la arena</button>
+    </div>
+
+ <!------ NAV ------>
+
+    <div class="barra">
+        <div class="logo">Los Juegos del Hambre</div>
+        <button class="boton-menu" onclick="toggleSidebar()">≡Menu</button>
+    </div>
+
+    <div class="lista-menu" id="lista-menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="panem.html">Panem</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>   
+
+    <!-- ESTO OSCURECE EL FONDO CUANDO SE ABRE EL MENU -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<!------  CONTENIDO ------>
+    
+    <main class="contenido-general">
+
+        <div class="container">
+
+            <!-- INTRO DE LOS JUEGOS DEL HAMBRE PAGINA PRINCIPAL-->
+            <section class="seccion">                             
+                <!-- TITULO -->
+                <article class="introduccion">
+                    <header class="titulo-principal">
+                        <h1>Los Juegos del Hambre</h1>
+                        <h2>Y que la suerte este siempre de tu lado</h2>
+                    </header>
+
+                    <p>CONTEXTO DE LO QUE QUE ES PANEM Y COMO ESTA COMPUESTO</p>    
+                    <video class="vd-inicio" src="">ACA VA UN VIDEO</video>
+                </article>
+
+                <!-- PELICULAS  -->
+                <article class="peliculas">
+
+                    <header class="titulo-peliculas">
+                        <h2>SECCION DE PELICULAS</h2>
+                    </header>
+                    
+                    <!-- CARRUSEL PELICULAS -->
+                    <div class="carrusel-container">
+
+                        <div class="carrusel-peliculas" data-index="0">
+                            <!-- PELICULA 1 -->
+                            <div class="peli-1">
+                                <h3>The Hunger Games</h3>
+                                <div class="info-peli">
+                                    <p>INFORMACION DE LA PELICULA</p>
+                                    <img src="imagen" alt="The Hunger Games">
+                                    <a href="link" target="_blank">Leer mas</a>
+                                </div>
+                            </div>
+                            <!-- PELICULA 2 -->
+                            <div class="peli-2">
+                                <h3>The Hunger Games: Catching Fire</h3>
+                                <div class="info-peli">
+                                    <p>INFORMACION DE LA PELICULA</p>
+                                    <img src="imagen" alt="The Hunger Games: Catching Fire">
+                                    <a href="link" target="_blank">Leer mas</a>
+                                </div>
+                            </div>
+                            <!-- PELICULA 3 -->
+                            <div class="peli-3">
+                                <h3>The Hunger Games: Mockingjay – Part 1</h3>
+                                <div class="info-peli">
+                                    <p>INFORMACION DE LA PELICULA</p>
+                                    <img src="imagen" alt="The Hunger Games: Mockingjay – Part 1">
+                                    <a href="link" target="_blank">Leer mas</a>
+                                </div>
+                            </div>
+                            <!-- PELICULA 4 -->
+                            <div class="peli-4">
+                                <h3>The Hunger Games: Mockingjay – Part 2</h3>
+                                <div class="info-peli">
+                                    <p>INFORMACION DE LA PELICULA</p>
+                                    <img src="imagen" alt="The Hunger Games: Mockingjay – Part 2">
+                                    <a href="link" target="_blank">Leer mas</a>
+                                </div>
+                            </div>
+                            <!-- PELICULA 5 -->
+                            <div class="peli-5">
+                                <h3>The Hunger Games: The Ballad of Songbirds & Snakes</h3>
+                                <div class="info-peli">
+                                    <p>INFORMACION DE LA PELICULA</p>
+                                    <img src="imagen" alt="The Hunger Games: The Ballad of Songbirds & Snakes">
+                                    <a href="link" target="_blank">Leer mas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BOTONES Y CONTROLES DEL CURRUSEL Y VA AFUERA DEL CONTENIDO DEL CARRUSEL -->
+                        <div class="carrusel-controles">
+                            <button onclick="moverCarrusel(this, -1)">◀</button>
+
+                            <div class="carrusel-puntos">
+                                <div class="punto activo"></div>
+                                <div class="punto"></div>
+                                <div class="punto"></div>
+                                <div class="punto"></div>
+                                <div class="punto"></div>
+                            </div>
+
+                            <button onclick="moverCarrusel(this, 1)">▶</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+<!----- JS ----->
+
+<script src="js/carrusel.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/audio.js"></script>
+</body>
