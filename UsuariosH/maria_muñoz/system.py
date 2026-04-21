@@ -1,7 +1,7 @@
 
-#----------------
+#---------------
 #  Validate
-#----------------
+#---------------
 
 def validate_data(message, types=str, condition=None, error="Value Error", enter_okay=False):
     okay= False
